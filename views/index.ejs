@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GSM 직거래 사이트</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body align="center">
+    <h1>GSM 직거래</h1>
+    <% if(session.islogin == 'login') { %>
+      <div style = "margin-left : 31%"><a href="/logout">로그아우토</a></div><br>
+    <% } %>
+    <% if(session.islogin != 'login') { %>
+    <div style = "margin-left : 31%"><a href="/login">로그인</a></div><br>
+    <% } %>
+    <p style = "margin-left : 31%"><a href="write">제품 올리기</a></p>
+    <hr width="35%" noshade>
+    <p>직거래 물건 현황</p>
+    <hr width="35%" noshade>
+    <% if (board !== null){
+        for(var i = 0; i < board.length; i++) { %>
+            <a href="/board/<%= board[i]._id%>"><h3><%= i+1 %> - <%=board[i].title%></h3></a>
+    <%  }} %>
+    
+  </body>
+  <hr width="35%" noshade>
+</html>

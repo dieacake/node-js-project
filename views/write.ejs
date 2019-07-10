@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>제품 올리기</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body align="center">
+    <h1>제품 올리기</h1>
+    <h3>상세히 올리기</h3>
+    <hr width="40%" noshade>
+    <form action="/board/write" method="post">
+      제목 : <input type="text" name="title" cols="50"><br>
+      <hr width="40%" noshade>
+      내용 : <textarea name="contents" rows="10"></textarea><br>
+      <hr width="40%" noshade>
+      글쓴이 : <input type="text" name="author"><br>
+      <hr width="40%" noshade>
+      분류 : <input type="text" name="kind"><br>
+      <input type="submit" value="확인">
+    </form>
+  </body>
+</html>
